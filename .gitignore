@@ -1,0 +1,70 @@
+# Build results
+bin/
+obj/
+
+# Visual Studio/JetBrains Rider/Microsoft VS Code
+.vs/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vscode/
+
+# Packages
+packages/
+*.nupkg
+*.snupkg
+
+# Xamarin/Mobile specific
+*.apk
+*.ap_
+*.aab
+*.ipa
+*.dSYM/
+*.app/
+*.xcuserstate
+lib/build/
+lib/props/
+lib/targets/
+
+# Logs and debug files
+*.log
+*.tlog
+*.pdb
+*.mdb
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Resharper files
+_ReSharper.*
+*.DotSettings.user
+
+# Temporary files
+*.tmp
+*.temp
+~$*
+
+# IDE-generated configurations
+launchSettings.json
+
+# .NET Specific
+*.vs/
+project.lock.json
+global.json
+.vscode/
+artifacts/
+*.lock.json
+
+# Maui Specific
+*.db
+*.db-shm
+*.db-wal
+fastdeploy/ 
+
+# JetBrains Rider specific
+.idea/
+*.sln.iml
