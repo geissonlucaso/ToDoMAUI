@@ -4,9 +4,51 @@
              x:Class="ToDoMAUI.MainPage">
 
     <Grid RowDefinitions="100, auto, *"
-          ColumnDefinitions=".75*, .25*">
+          ColumnDefinitions=".75*, .25*"
+          Padding="10"
+          RowSpacing="10"
+          ColumnSpacing="10">
         <Image Grid.ColumnSpan="2"
-            Source="dotnet_bot.png"/>
+            Source="dotnet_bot.png"
+            BackgroundColor="Transparent"/>
+
+        <Entry Placeholder="Enter task"
+               Grid.Row="1"
+               FontSize="20"/>
+
+        <Button Text="Add"
+                Grid.Row="1"
+                Grid.Column="1"
+                FontSize="20"/>
+
+        <CollectionView Grid.Row="2" Grid.ColumnSpan="2">
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Apples</x:String>
+                    <x:String>Bananas</x:String>
+                    <x:String>Oranges</x:String>
+                </x:Array>
+            </CollectionView.ItemsSource>
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <SwipeView>
+                        <SwipeView.LeftItems>
+                            <SwipeItems>
+                                <SwipeItem Text="Delete"
+                                           BackgroundColor="Red"/>
+                            </SwipeItems>
+                        </SwipeView.LeftItems>
+                        <Grid Padding="0,5">
+                            <Frame BackgroundColor="White">
+                                <Label Text="{Binding .}"
+                                       FontSize="24"
+                                       TextColor="Black"/>
+                            </Frame>
+                        </Grid>
+                    </SwipeView>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
     </Grid>
     
 </ContentPage>
