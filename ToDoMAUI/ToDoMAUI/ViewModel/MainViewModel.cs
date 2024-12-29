@@ -38,6 +38,18 @@ namespace ToDoMAUI.ViewModel
             }
         }
 
-        
+        [RelayCommand]
+        async Task Tap(string s)
+        {
+            // Passing a complex object.
+            //await Shell.Current.GoToAsync($"{nameof(DetailPage)}?Text={s}",
+            //    new Dictionary<string, object>
+            //    {
+            //        { nameof(DetailPage), new object() },
+            //    });
+
+            // Passin simple data.
+            await Shell.Current.GoToAsync($"{nameof(DetailPage)}?Text={s}");
+        }
     }
 }
